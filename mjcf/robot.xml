@@ -16,9 +16,9 @@
     </default>
   </default>
   <worldbody>
-    <!-- Link motor_holder -->
-    <body name="motor_holder" pos="0 0 0" quat="1 0 0 0" childclass="robot">
-      <freejoint name="motor_holder_freejoint"/>
+    <!-- Link base_link -->
+    <body name="base_link" pos="0 0 0" quat="1 0 0 0" childclass="robot">
+      <freejoint name="base_link_freejoint"/>
       <inertial pos="0.667869 0.000735149 0.444437" mass="1.06123" fullinertia="0.00497483 0.00129427 0.00387499 8.0766e-07 1.91128e-05 -3.18755e-05"/>
       <!-- Part motor_holder -->
       <geom type="mesh" class="visual" pos="0.6858 -0.0097675 0.450456" quat="6.57873e-16 -0.707107 -0.707107 4.24228e-16" mesh="motor_holder" material="motor_holder_material"/>
@@ -42,7 +42,7 @@
       <site group="3" name="imu_link" pos="0.6663 -0.0247675 0.518956" quat="1 1.70529e-16 3.33067e-16 -1.23875e-15"/>
       <!-- Link shaftcouplerleft -->
       <body name="shaftcouplerleft" pos="0.6808 -0.0642675 0.432956" quat="0.110616 0.698401 0.110616 0.698401">
-        <!-- Joint from motor_holder to shaftcouplerleft -->
+        <!-- Joint from base_link to shaftcouplerleft -->
         <joint axis="0 0 1" name="a" type="hinge"/>
         <inertial pos="-0.015993 -0.00519645 0.0297508" mass="0.0357466" fullinertia="8.81377e-06 2.40779e-05 2.12154e-05 -5.54502e-06 3.57263e-06 1.16082e-06"/>
         <!-- Part shaftcouplerleft -->
@@ -58,7 +58,7 @@
       </body>
       <!-- Link shaftcouplerright -->
       <body name="shaftcouplerright" pos="0.6808 0.0647675 0.432956" quat="0.630037 -0.32102 0.630037 -0.32102">
-        <!-- Joint from motor_holder to shaftcouplerright -->
+        <!-- Joint from base_link to shaftcouplerright -->
         <joint axis="0 0 1" name="l" type="hinge"/>
         <inertial pos="0.00758867 0.0104449 0.0184447" mass="0.0315004" fullinertia="1.10458e-05 7.58983e-06 1.34529e-05 -5.31812e-06 -6.10832e-07 -8.40741e-07"/>
         <!-- Part 68mm -->
@@ -71,7 +71,7 @@
         <body name="225mmtop" pos="0 5.55112e-17 0.029" quat="1.96324e-17 0.824864 -0.565331 -4.7213e-17">
           <!-- Joint from shaftcouplerright to 225mmtop -->
           <joint axis="0 0 1" name="BR_leg1_1 (1) (1)" type="hinge"/>
-          <inertial pos="2.90656e-17 -0.103396 -0.008" mass="0.0562684" fullinertia="0.000237245 2.00635e-06 0.000237309 2.9262e-21 -9.15775e-37 2.88979e-35"/>
+          <inertial pos="2.9052e-17 -0.103396 -0.008" mass="0.0562684" fullinertia="0.000237245 2.00635e-06 0.000237309 2.9262e-21 -9.15775e-37 2.88979e-35"/>
           <!-- Part 225mmtop -->
           <geom type="mesh" class="visual" pos="2.77556e-17 -0.1035 -0.008" quat="0.5 0.5 0.5 -0.5" mesh="225mmtop" material="225mmtop_material"/>
           <geom type="mesh" class="collision" pos="2.77556e-17 -0.1035 -0.008" quat="0.5 0.5 0.5 -0.5" mesh="225mmtop" material="225mmtop_material"/>
@@ -97,7 +97,7 @@
         <body name="225mmbottom" pos="0.0292942 0.0403199 0.029" quat="8.06637e-17 0.82527 -0.564738 -6.57508e-16">
           <!-- Joint from shaftcouplerright to 225mmbottom -->
           <joint axis="0 0 1" name="BR_leg2_1 (1) (1)" type="hinge"/>
-          <inertial pos="3.10629e-17 -0.1035 -0.008" mass="0.0563618" fullinertia="0.000237565 1.94076e-06 0.000237608 -1.33629e-21 5.41552e-35 -1.971e-36"/>
+          <inertial pos="3.10637e-17 -0.1035 -0.008" mass="0.0563618" fullinertia="0.000237565 1.94076e-06 0.000237608 -1.33629e-21 5.41552e-35 -1.971e-36"/>
           <!-- Part 225mmbottom -->
           <geom type="mesh" class="visual" pos="2.77556e-17 -0.1035 -0.008" quat="0.5 -0.5 -0.5 -0.5" mesh="225mmbottom" material="225mmbottom_material"/>
           <geom type="mesh" class="collision" pos="2.77556e-17 -0.1035 -0.008" quat="0.5 -0.5 -0.5 -0.5" mesh="225mmbottom" material="225mmbottom_material"/>
@@ -118,7 +118,7 @@
       </body>
       <!-- Link part_1 -->
       <body name="part_1" pos="1.11022e-16 0.0105 0.498956" quat="0.707107 0.707107 -3.33067e-16 -8.5155e-16">
-        <!-- Joint from motor_holder to part_1 -->
+        <!-- Joint from base_link to part_1 -->
         <joint axis="0 0 1" name="yaw" type="hinge"/>
         <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
         <!-- Part part_1_5 -->
@@ -128,7 +128,7 @@
         <body name="part_1_2" pos="1.21116e-17 -0.149706 0.0105" quat="0.5 -0.5 0.5 0.5">
           <!-- Joint from part_1 to part_1_2 -->
           <joint axis="0 0 1" name="pitch" type="hinge"/>
-          <inertial pos="-1.78348e-17 1.45692e-17 -0.299388" mass="4.06535" fullinertia="0.140289 0.140289 0.220217 -2.28941e-24 -1.35452e-54 8.30016e-32"/>
+          <inertial pos="-1.78603e-17 1.45764e-17 -0.299388" mass="4.06535" fullinertia="0.140289 0.140289 0.220217 -2.28941e-24 -1.35452e-54 8.30016e-32"/>
           <!-- Part part_1_6 -->
           <geom type="mesh" class="visual" pos="-6.93889e-18 -1.04083e-17 -0.34925" quat="1 -0 -6.61744e-24 8.88178e-16" mesh="part_1__4" material="part_1__4_material"/>
           <geom type="mesh" class="collision" pos="-6.93889e-18 -1.04083e-17 -0.34925" quat="1 -0 -6.61744e-24 8.88178e-16" mesh="part_1__4" material="part_1__4_material"/>
@@ -139,18 +139,18 @@
   <asset>
     <mesh file="t_slot_frame.stl"/>
     <mesh file="part_1.stl"/>
-    <mesh file="160mm.stl"/>
     <mesh file="80mm.stl"/>
-    <mesh file="motor_holder.stl"/>
-    <mesh file="225mmbottom.stl"/>
-    <mesh file="part_1__3.stl"/>
     <mesh file="68mm.stl"/>
-    <mesh file="part_1__2.stl"/>
-    <mesh file="shaftcouplerright.stl"/>
-    <mesh file="105mm.stl"/>
-    <mesh file="shaftcouplerleft.stl"/>
     <mesh file="225mmtop.stl"/>
     <mesh file="part_1__4.stl"/>
+    <mesh file="shaftcouplerleft.stl"/>
+    <mesh file="shaftcouplerright.stl"/>
+    <mesh file="part_1__3.stl"/>
+    <mesh file="225mmbottom.stl"/>
+    <mesh file="105mm.stl"/>
+    <mesh file="part_1__2.stl"/>
+    <mesh file="160mm.stl"/>
+    <mesh file="motor_holder.stl"/>
     <material name="motor_holder_material" rgba="0.917647 0.917647 0.917647 1"/>
     <material name="t_slot_frame_material" rgba="0.752941 0.752941 0.752941 1"/>
     <material name="part_1_material" rgba="0.498039 0.498039 0.498039 1"/>

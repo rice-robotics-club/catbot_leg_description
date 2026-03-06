@@ -2,8 +2,8 @@
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape document_id: 9c20b098af12cbd02fc50d1f / workspace_id: 91f9e8051518d9fb326b8e23 -->
 <robot name="robot">
-  <!-- Link motor_holder -->
-  <link name="motor_holder">
+  <!-- Link base_link -->
+  <link name="base_link">
     <inertial>
       <origin xyz="0.667869 0.000735149 0.444437" rpy="0 0 0"/>
       <mass value="1.06123"/>
@@ -117,7 +117,7 @@
   </link>
   <joint name="imu_link_frame" type="fixed">
     <origin xyz="0.6663 -0.0247675 0.518956" rpy="3.30424e-16 8.36432e-16 -2.58163e-15"/>
-    <parent link="motor_holder"/>
+    <parent link="base_link"/>
     <child link="imu_link"/>
     <axis xyz="0 0 0"/>
   </joint>
@@ -191,10 +191,10 @@
     <child link="closing_BR_leg0_1 (1) (1)_2_z"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <!-- Joint from motor_holder to shaftcouplerleft -->
+  <!-- Joint from base_link to shaftcouplerleft -->
   <joint name="a" type="revolute">
     <origin xyz="0.6808 -0.0642675 0.432956" rpy="1.5708 -1.25664 1.5708"/>
-    <parent link="motor_holder"/>
+    <parent link="base_link"/>
     <child link="shaftcouplerleft"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
@@ -242,7 +242,7 @@
   <!-- Link 225mmtop -->
   <link name="225mmtop">
     <inertial>
-      <origin xyz="2.90656e-17 -0.103396 -0.008" rpy="0 0 0"/>
+      <origin xyz="2.9052e-17 -0.103396 -0.008" rpy="0 0 0"/>
       <mass value="0.0562684"/>
       <inertia ixx="0.000237245" ixy="2.9262e-21" ixz="-9.15775e-37" iyy="2.00635e-06" iyz="2.88979e-35" izz="0.000237309"/>
     </inertial>
@@ -366,7 +366,7 @@
   <!-- Link 225mmbottom -->
   <link name="225mmbottom">
     <inertial>
-      <origin xyz="3.10629e-17 -0.1035 -0.008" rpy="0 0 0"/>
+      <origin xyz="3.10637e-17 -0.1035 -0.008" rpy="0 0 0"/>
       <mass value="0.0563618"/>
       <inertia ixx="0.000237565" ixy="-1.33629e-21" ixz="5.41552e-35" iyy="1.94076e-06" iyz="-1.971e-36" izz="0.000237608"/>
     </inertial>
@@ -457,10 +457,10 @@
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
-  <!-- Joint from motor_holder to shaftcouplerright -->
+  <!-- Joint from base_link to shaftcouplerright -->
   <joint name="l" type="revolute">
     <origin xyz="0.6808 0.0647675 0.432956" rpy="-1.5708 0.628319 -1.5708"/>
-    <parent link="motor_holder"/>
+    <parent link="base_link"/>
     <child link="shaftcouplerright"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
@@ -492,7 +492,7 @@
   <!-- Link part_1_2 -->
   <link name="part_1_2">
     <inertial>
-      <origin xyz="-1.78348e-17 1.45692e-17 -0.299388" rpy="0 0 0"/>
+      <origin xyz="-1.78603e-17 1.45764e-17 -0.299388" rpy="0 0 0"/>
       <mass value="4.06535"/>
       <inertia ixx="0.140289" ixy="-2.28941e-24" ixz="-1.35452e-54" iyy="0.140289" iyz="8.30016e-32" izz="0.220217"/>
     </inertial>
@@ -521,10 +521,10 @@
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
-  <!-- Joint from motor_holder to part_1 -->
+  <!-- Joint from base_link to part_1 -->
   <joint name="yaw" type="revolute">
     <origin xyz="1.11022e-16 0.0105 0.498956" rpy="1.5708 7.752e-16 -1.66569e-15"/>
-    <parent link="motor_holder"/>
+    <parent link="base_link"/>
     <child link="part_1"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
