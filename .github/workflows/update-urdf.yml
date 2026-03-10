@@ -43,7 +43,7 @@ jobs:
       - run: |
           mv -f robot.xml mjcf/robot.xml
           mv -f robot.urdf urdf/robot.urdf
-          rm scene.xml
+          mv -f scene.xml mjcf/scene.xml
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
