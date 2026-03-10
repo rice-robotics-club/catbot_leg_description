@@ -5,10 +5,26 @@
   <!-- Link base_link -->
   <link name="base_link">
     <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+      <origin xyz="-2.50838e-17 -1.09469e-17 0.0498616" rpy="0 0 0"/>
+      <mass value="4.06535"/>
+      <inertia ixx="0.140289" ixy="3.41547e-24" ixz="0" iyy="0.140289" iyz="0" izz="0.220217"/>
     </inertial>
+    <!-- Part part_1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://catbot_leg_description/meshes/part_1.stl"/>
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="0.47451 0.352941 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://catbot_leg_description/meshes/part_1.stl"/>
+      </geometry>
+    </collision>
   </link>
   <!-- Link part_1 -->
   <link name="part_1">
@@ -274,7 +290,7 @@
   <!-- Link 225mmtop -->
   <link name="225mmtop">
     <inertial>
-      <origin xyz="-2.64455e-17 -0.103396 -0.008" rpy="0 0 0"/>
+      <origin xyz="-2.64804e-17 -0.103396 -0.008" rpy="0 0 0"/>
       <mass value="0.0562684"/>
       <inertia ixx="0.000237245" ixy="2.9262e-21" ixz="-9.15775e-37" iyy="2.00635e-06" iyz="2.88979e-35" izz="0.000237309"/>
     </inertial>
@@ -398,7 +414,7 @@
   <!-- Link 225mmbottom -->
   <link name="225mmbottom">
     <inertial>
-      <origin xyz="3.10445e-17 -0.1035 -0.008" rpy="0 0 0"/>
+      <origin xyz="3.1054e-17 -0.1035 -0.008" rpy="0 0 0"/>
       <mass value="0.0563618"/>
       <inertia ixx="0.000237565" ixy="-1.33629e-21" ixz="5.41552e-35" iyy="1.94076e-06" iyz="-1.971e-36" izz="0.000237608"/>
     </inertial>
@@ -498,7 +514,7 @@
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from part_1 to hip_link -->
-  <joint name="yaw" type="revolute">
+  <joint name="pitch" type="revolute">
     <origin xyz="0.0105 -7.08145e-18 -0.149706" rpy="1.5708 7.55122e-16 1.5708"/>
     <parent link="part_1"/>
     <child link="hip_link"/>
@@ -506,42 +522,10 @@
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from base_link to part_1 -->
-  <joint name="pitch" type="revolute">
+  <joint name="yaw" type="continuous">
     <origin xyz="-1.04083e-17 0 0.34925" rpy="3.14159 -0 1.5708"/>
     <parent link="base_link"/>
     <child link="part_1"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
-  </joint>
-  <!-- Link base_link_part_1 -->
-  <link name="base_link_part_1">
-    <inertial>
-      <origin xyz="-1.08818e-17 2.51317e-17 0.0498616" rpy="0 0 0"/>
-      <mass value="4.06535"/>
-      <inertia ixx="0.140289" ixy="1.47635e-40" ixz="0" iyy="0.140289" iyz="0" izz="0.220217"/>
-    </inertial>
-    <!-- Part part_1 -->
-    <visual>
-      <origin xyz="0 0 0" rpy="0 -0 5.26179e-40"/>
-      <geometry>
-        <mesh filename="package://catbot_leg_description/meshes/part_1.stl"/>
-      </geometry>
-      <material name="part_1_material">
-        <color rgba="0.47451 0.352941 0 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 -0 5.26179e-40"/>
-      <geometry>
-        <mesh filename="package://catbot_leg_description/meshes/part_1.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Joint from base_link to base_link_part_1 -->
-  <joint name="base_link_part_1_fixed" type="fixed">
-    <origin xyz="0 0 0" rpy="0 -0 1.5708"/>
-    <parent link="base_link"/>
-    <child link="base_link_part_1"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
