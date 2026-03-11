@@ -5,7 +5,7 @@
   <!-- Link base_link -->
   <link name="base_link">
     <inertial>
-      <origin xyz="-2.50838e-17 -1.09469e-17 0.0498616" rpy="0 0 0"/>
+      <origin xyz="-2.49848e-17 -1.10765e-17 0.0498616" rpy="0 0 0"/>
       <mass value="4.06535"/>
       <inertia ixx="0.140289" ixy="3.41547e-24" ixz="0" iyy="0.140289" iyz="0" izz="0.220217"/>
     </inertial>
@@ -35,7 +35,7 @@
     </inertial>
     <!-- Part part_1_2 -->
     <visual>
-      <origin xyz="-0.0315 -0.0105 0" rpy="3.14159 -0 0"/>
+      <origin xyz="-0.0315 -0.0105 0" rpy="3.14159 1.8733e-33 -4.06498e-31"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__2.stl"/>
       </geometry>
@@ -44,7 +44,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0315 -0.0105 0" rpy="3.14159 -0 0"/>
+      <origin xyz="-0.0315 -0.0105 0" rpy="3.14159 1.8733e-33 -4.06498e-31"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__2.stl"/>
       </geometry>
@@ -107,7 +107,7 @@
     </collision>
     <!-- Part part_1_4 -->
     <visual>
-      <origin xyz="0.6573 0.066 -0.0747675" rpy="1.17761e-15 1.10647 1.5708"/>
+      <origin xyz="0.6573 0.066 -0.0747675" rpy="3.14159 -0.91163 -1.5708"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__4.stl"/>
       </geometry>
@@ -116,7 +116,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.6573 0.066 -0.0747675" rpy="1.17761e-15 1.10647 1.5708"/>
+      <origin xyz="0.6573 0.066 -0.0747675" rpy="3.14159 -0.91163 -1.5708"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__4.stl"/>
       </geometry>
@@ -139,7 +139,7 @@
     </collision>
     <!-- Part part_1_6 -->
     <visual>
-      <origin xyz="0.6573 0.066 0.0542675" rpy="1.17761e-15 1.10647 1.5708"/>
+      <origin xyz="0.6573 0.066 0.0542675" rpy="-2.14754e-15 0.549874 1.5708"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__4.stl"/>
       </geometry>
@@ -148,7 +148,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.6573 0.066 0.0542675" rpy="1.17761e-15 1.10647 1.5708"/>
+      <origin xyz="0.6573 0.066 0.0542675" rpy="-2.14754e-15 0.549874 1.5708"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__4.stl"/>
       </geometry>
@@ -178,7 +178,7 @@
     </inertial>
     <!-- Part shaftcouplerleft -->
     <visual>
-      <origin xyz="0 0 0" rpy="-1.5708 2.24787e-32 3.5646e-17"/>
+      <origin xyz="0 0 0" rpy="-1.5708 9.85919e-31 -1.57753e-17"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/shaftcouplerleft.stl"/>
       </geometry>
@@ -187,7 +187,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="-1.5708 2.24787e-32 3.5646e-17"/>
+      <origin xyz="0 0 0" rpy="-1.5708 9.85919e-31 -1.57753e-17"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/shaftcouplerleft.stl"/>
       </geometry>
@@ -219,7 +219,7 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg0_1 (1) (1)_2_frame" type="fixed">
-    <origin xyz="-0.0588116 -0.0191091 0.028" rpy="-2.17485e-14 1.40298e-14 0.314159"/>
+    <origin xyz="-0.0588116 -0.0191091 0.028" rpy="9.7098e-16 -2.75934e-16 0.314159"/>
     <parent link="shaftcouplerleft"/>
     <child link="closing_BR_leg0_1 (1) (1)_2"/>
     <axis xyz="0 0 0"/>
@@ -234,7 +234,7 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg0_1 (1) (1)_2_z_frame" type="fixed">
-    <origin xyz="-0.0588116 -0.0191091 0.128" rpy="-2.17485e-14 1.40298e-14 0.314159"/>
+    <origin xyz="-0.0588116 -0.0191091 0.128" rpy="9.7098e-16 -2.75934e-16 0.314159"/>
     <parent link="shaftcouplerleft"/>
     <child link="closing_BR_leg0_1 (1) (1)_2_z"/>
     <axis xyz="0 0 0"/>
@@ -245,7 +245,7 @@
     <parent link="hip_link"/>
     <child link="shaftcouplerleft"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="10" velocity="10" lower="-2.70526" upper="0.261799"/>
   </joint>
   <!-- Link shaftcouplerright -->
   <link name="shaftcouplerright">
@@ -272,7 +272,7 @@
     </collision>
     <!-- Part shaftcouplerright -->
     <visual>
-      <origin xyz="0 0 0" rpy="-1.5708 6.33903e-32 1.59139e-17"/>
+      <origin xyz="-5.55112e-17 0 0" rpy="-1.5708 2.77545e-31 -5.97434e-17"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/shaftcouplerright.stl"/>
       </geometry>
@@ -281,7 +281,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="-1.5708 6.33903e-32 1.59139e-17"/>
+      <origin xyz="-5.55112e-17 0 0" rpy="-1.5708 2.77545e-31 -5.97434e-17"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/shaftcouplerright.stl"/>
       </geometry>
@@ -290,13 +290,13 @@
   <!-- Link 225mmtop -->
   <link name="225mmtop">
     <inertial>
-      <origin xyz="-2.64804e-17 -0.103396 -0.008" rpy="0 0 0"/>
+      <origin xyz="1.25133e-18 -0.103396 -0.008" rpy="0 0 0"/>
       <mass value="0.0562684"/>
-      <inertia ixx="0.000237245" ixy="2.9262e-21" ixz="-9.15775e-37" iyy="2.00635e-06" iyz="2.88979e-35" izz="0.000237309"/>
+      <inertia ixx="0.000237245" ixy="-5.97315e-21" ixz="3.3136e-34" iyy="2.00635e-06" iyz="-3.4686e-34" izz="0.000237309"/>
     </inertial>
     <!-- Part 225mmtop -->
     <visual>
-      <origin xyz="-2.77556e-17 -0.1035 -0.008" rpy="1.5708 1.5708 0"/>
+      <origin xyz="0 -0.1035 -0.008" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/225mmtop.stl"/>
       </geometry>
@@ -305,7 +305,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-2.77556e-17 -0.1035 -0.008" rpy="1.5708 1.5708 0"/>
+      <origin xyz="0 -0.1035 -0.008" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/225mmtop.stl"/>
       </geometry>
@@ -321,7 +321,7 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg3_1 (1) (1)_2_frame" type="fixed">
-    <origin xyz="-5.55112e-17 -0.207 0" rpy="-3.14159 2.92432e-32 1.5708"/>
+    <origin xyz="2.77556e-17 -0.207 0" rpy="3.14159 -3.96308e-31 1.5708"/>
     <parent link="225mmtop"/>
     <child link="closing_BR_leg3_1 (1) (1)_2"/>
     <axis xyz="0 0 0"/>
@@ -336,7 +336,7 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg3_1 (1) (1)_2_z_frame" type="fixed">
-    <origin xyz="-5.55112e-17 -0.207 -0.1" rpy="-3.14159 2.92432e-32 1.5708"/>
+    <origin xyz="2.77556e-17 -0.207 -0.1" rpy="3.14159 -3.96308e-31 1.5708"/>
     <parent link="225mmtop"/>
     <child link="closing_BR_leg3_1 (1) (1)_2_z"/>
     <axis xyz="0 0 0"/>
@@ -346,7 +346,7 @@
     <inertial>
       <origin xyz="0.0374284 -0.0221668 -0.009" rpy="0 0 0"/>
       <mass value="0.0262025"/>
-      <inertia ixx="7.06118e-06" ixy="1.02753e-05" ixz="5.82769e-23" iyy="1.83254e-05" iyz="5.40139e-23" izz="2.44536e-05"/>
+      <inertia ixx="7.06118e-06" ixy="1.02753e-05" ixz="-5.92086e-20" iyy="1.83254e-05" iyz="-1.17201e-19" izz="2.44536e-05"/>
     </inertial>
     <!-- Part 105mm -->
     <visual>
@@ -375,7 +375,7 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg0_1 (1) (1)_1_frame" type="fixed">
-    <origin xyz="0.0748567 -0.0443336 -0.001" rpy="2.31825e-17 3.12039e-18 -2.1055"/>
+    <origin xyz="0.0748567 -0.0443336 -0.001" rpy="9.11366e-15 -7.23279e-15 -2.1055"/>
     <parent link="105mm"/>
     <child link="closing_BR_leg0_1 (1) (1)_1"/>
     <axis xyz="0 0 0"/>
@@ -390,14 +390,14 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg0_1 (1) (1)_1_z_frame" type="fixed">
-    <origin xyz="0.0748567 -0.0443336 0.099" rpy="2.31825e-17 3.12039e-18 -2.1055"/>
+    <origin xyz="0.0748567 -0.0443336 0.099" rpy="9.11366e-15 -7.23279e-15 -2.1055"/>
     <parent link="105mm"/>
     <child link="closing_BR_leg0_1 (1) (1)_1_z"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from 225mmtop to 105mm -->
   <joint name="BR_leg_cyl_0_1 (1) (1)" type="revolute">
-    <origin xyz="-5.55112e-17 -0.166278 0" rpy="3.14159 3.7907e-32 1.13039e-17"/>
+    <origin xyz="2.77556e-17 -0.166278 -1.11022e-16" rpy="-3.14159 -6.74381e-32 -2.54852e-17"/>
     <parent link="225mmtop"/>
     <child link="105mm"/>
     <axis xyz="0 0 1"/>
@@ -405,22 +405,22 @@
   </joint>
   <!-- Joint from shaftcouplerright to 225mmtop -->
   <joint name="BR_leg1_1 (1) (1)" type="revolute">
-    <origin xyz="0 0 0.029" rpy="3.14159 1.11382e-16 -1.20167"/>
+    <origin xyz="-5.55112e-17 -1.11022e-16 0.029" rpy="-3.14159 6.91027e-16 -1.20167"/>
     <parent link="shaftcouplerright"/>
     <child link="225mmtop"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="10" velocity="10" lower="-0.119564" upper="2.0621"/>
   </joint>
   <!-- Link 225mmbottom -->
   <link name="225mmbottom">
     <inertial>
-      <origin xyz="3.1054e-17 -0.1035 -0.008" rpy="0 0 0"/>
+      <origin xyz="5.88206e-17 -0.1035 -0.008" rpy="0 0 0"/>
       <mass value="0.0563618"/>
-      <inertia ixx="0.000237565" ixy="-1.33629e-21" ixz="5.41552e-35" iyy="1.94076e-06" iyz="-1.971e-36" izz="0.000237608"/>
+      <inertia ixx="0.000237565" ixy="1.35657e-20" ixz="9.24595e-35" iyy="1.94076e-06" iyz="-1.22493e-35" izz="0.000237608"/>
     </inertial>
     <!-- Part 225mmbottom -->
     <visual>
-      <origin xyz="2.77556e-17 -0.1035 -0.008" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="5.55112e-17 -0.1035 -0.008" rpy="-1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/225mmbottom.stl"/>
       </geometry>
@@ -429,7 +429,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="2.77556e-17 -0.1035 -0.008" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="5.55112e-17 -0.1035 -0.008" rpy="-1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/225mmbottom.stl"/>
       </geometry>
@@ -440,7 +440,7 @@
     <inertial>
       <origin xyz="-0.0115677 0.0177756 -0.008" rpy="0 0 0"/>
       <mass value="0.0400222"/>
-      <inertia ixx="6.08306e-05" ixy="3.86638e-05" ixz="1.75253e-19" iyy="2.65789e-05" iyz="1.14557e-19" izz="8.60343e-05"/>
+      <inertia ixx="6.08306e-05" ixy="3.86638e-05" ixz="-1.73339e-19" iyy="2.65789e-05" iyz="-9.20495e-20" izz="8.60343e-05"/>
     </inertial>
     <!-- Part 160mm -->
     <visual>
@@ -469,7 +469,7 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg3_1 (1) (1)_1_frame" type="fixed">
-    <origin xyz="0.027272 -0.0419075 2.22045e-16" rpy="-3.0083e-16 2.4348e-15 -2.56468"/>
+    <origin xyz="0.027272 -0.0419075 -6.66134e-16" rpy="-1.22687e-14 -2.27337e-15 -2.56468"/>
     <parent link="160mm"/>
     <child link="closing_BR_leg3_1 (1) (1)_1"/>
     <axis xyz="0 0 0"/>
@@ -484,26 +484,26 @@
     </inertial>
   </link>
   <joint name="closing_BR_leg3_1 (1) (1)_1_z_frame" type="fixed">
-    <origin xyz="0.027272 -0.0419075 0.1" rpy="-3.0083e-16 2.4348e-15 -2.56468"/>
+    <origin xyz="0.027272 -0.0419075 0.1" rpy="-1.22687e-14 -2.27337e-15 -2.56468"/>
     <parent link="160mm"/>
     <child link="closing_BR_leg3_1 (1) (1)_1_z"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from 225mmbottom to 160mm -->
   <joint name="BR_leg_cyl_1_1 (1) (1)" type="revolute">
-    <origin xyz="2.77556e-17 -0.207 -1.11022e-16" rpy="-3.14159 -1.4511e-31 -6.07804e-18"/>
+    <origin xyz="5.55112e-17 -0.207 -1.11022e-16" rpy="3.14159 -4.88264e-31 5.70903e-17"/>
     <parent link="225mmbottom"/>
     <child link="160mm"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="10" velocity="10" lower="-0.140581" upper="2.12835"/>
   </joint>
   <!-- Joint from shaftcouplerright to 225mmbottom -->
   <joint name="BR_leg2_1 (1) (1)" type="revolute">
-    <origin xyz="0.0292942 0.0403199 0.029" rpy="3.14159 1.98827e-15 -1.20023"/>
+    <origin xyz="0.0292942 0.0403199 0.029" rpy="3.14159 1.46668e-15 -1.20023"/>
     <parent link="shaftcouplerright"/>
     <child link="225mmbottom"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="10" velocity="10" lower="-0.135581" upper="2.22061"/>
   </joint>
   <!-- Joint from hip_link to shaftcouplerright -->
   <joint name="l" type="revolute">
@@ -511,11 +511,11 @@
     <parent link="hip_link"/>
     <child link="shaftcouplerright"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="10" velocity="10" lower="-1.0472" upper="2.18166"/>
   </joint>
   <!-- Joint from part_1 to hip_link -->
   <joint name="pitch" type="revolute">
-    <origin xyz="0.0105 -7.08145e-18 -0.149706" rpy="1.5708 7.55122e-16 1.5708"/>
+    <origin xyz="0.0105 1.54859e-16 -0.149706" rpy="1.5708 -1.31896e-14 1.5708"/>
     <parent link="part_1"/>
     <child link="hip_link"/>
     <axis xyz="0 0 1"/>
@@ -523,7 +523,7 @@
   </joint>
   <!-- Joint from base_link to part_1 -->
   <joint name="yaw" type="continuous">
-    <origin xyz="-1.04083e-17 0 0.34925" rpy="3.14159 -0 1.5708"/>
+    <origin xyz="-1.73472e-18 0 0.34925" rpy="-3.14159 1.21905e-17 1.5708"/>
     <parent link="base_link"/>
     <child link="part_1"/>
     <axis xyz="0 0 1"/>
