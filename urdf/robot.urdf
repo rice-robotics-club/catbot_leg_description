@@ -5,7 +5,7 @@
   <!-- Link base_link -->
   <link name="base_link">
     <inertial>
-      <origin xyz="-2.49848e-17 -1.10765e-17 0.0498616" rpy="0 0 0"/>
+      <origin xyz="-2.4974e-17 -1.09866e-17 0.0498616" rpy="0 0 0"/>
       <mass value="4.06535"/>
       <inertia ixx="0.140289" ixy="3.41547e-24" ixz="0" iyy="0.140289" iyz="0" izz="0.220217"/>
     </inertial>
@@ -53,9 +53,9 @@
   <!-- Link hip_link -->
   <link name="hip_link">
     <inertial>
-      <origin xyz="0.667869 0.0545192 -0.00976485" rpy="0 0 0"/>
-      <mass value="1.06123"/>
-      <inertia ixx="0.00497483" ixy="-1.91128e-05" ixz="8.0766e-07" iyy="0.00387499" iyz="3.18755e-05" izz="0.00129427"/>
+      <origin xyz="0.667981 0.0543962 -0.00976208" rpy="0 0 0"/>
+      <mass value="1.05519"/>
+      <inertia ixx="0.00496348" ixy="-2.16688e-05" ixz="8.65348e-07" iyy="0.0038715" iyz="3.18122e-05" izz="0.00128175"/>
     </inertial>
     <!-- Part motor_holder -->
     <visual>
@@ -107,7 +107,7 @@
     </collision>
     <!-- Part part_1_4 -->
     <visual>
-      <origin xyz="0.6573 0.066 -0.0747675" rpy="3.14159 -0.91163 -1.5708"/>
+      <origin xyz="0.6573 0.066 -0.0747675" rpy="1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__4.stl"/>
       </geometry>
@@ -116,7 +116,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.6573 0.066 -0.0747675" rpy="3.14159 -0.91163 -1.5708"/>
+      <origin xyz="0.6573 0.066 -0.0747675" rpy="1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/part_1__4.stl"/>
       </geometry>
@@ -272,7 +272,7 @@
     </collision>
     <!-- Part shaftcouplerright -->
     <visual>
-      <origin xyz="-5.55112e-17 0 0" rpy="-1.5708 2.77545e-31 -5.97434e-17"/>
+      <origin xyz="0 0 0" rpy="-1.5708 1.85939e-30 -2.43643e-17"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/shaftcouplerright.stl"/>
       </geometry>
@@ -281,7 +281,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-5.55112e-17 0 0" rpy="-1.5708 2.77545e-31 -5.97434e-17"/>
+      <origin xyz="0 0 0" rpy="-1.5708 1.85939e-30 -2.43643e-17"/>
       <geometry>
         <mesh filename="package://catbot_leg_description/meshes/shaftcouplerright.stl"/>
       </geometry>
@@ -290,7 +290,7 @@
   <!-- Link 225mmtop -->
   <link name="225mmtop">
     <inertial>
-      <origin xyz="1.25133e-18 -0.103396 -0.008" rpy="0 0 0"/>
+      <origin xyz="1.27394e-18 -0.103396 -0.008" rpy="0 0 0"/>
       <mass value="0.0562684"/>
       <inertia ixx="0.000237245" ixy="-5.97315e-21" ixz="3.3136e-34" iyy="2.00635e-06" iyz="-3.4686e-34" izz="0.000237309"/>
     </inertial>
@@ -405,7 +405,7 @@
   </joint>
   <!-- Joint from shaftcouplerright to 225mmtop -->
   <joint name="BR_leg1_1 (1) (1)" type="revolute">
-    <origin xyz="-5.55112e-17 -1.11022e-16 0.029" rpy="-3.14159 6.91027e-16 -1.20167"/>
+    <origin xyz="-1.11022e-16 -1.66533e-16 0.029" rpy="-3.14159 5.73317e-16 -1.20167"/>
     <parent link="shaftcouplerright"/>
     <child link="225mmtop"/>
     <axis xyz="0 0 1"/>
@@ -414,7 +414,7 @@
   <!-- Link 225mmbottom -->
   <link name="225mmbottom">
     <inertial>
-      <origin xyz="5.88206e-17 -0.1035 -0.008" rpy="0 0 0"/>
+      <origin xyz="5.88001e-17 -0.1035 -0.008" rpy="0 0 0"/>
       <mass value="0.0563618"/>
       <inertia ixx="0.000237565" ixy="1.35657e-20" ixz="9.24595e-35" iyy="1.94076e-06" iyz="-1.22493e-35" izz="0.000237608"/>
     </inertial>
@@ -499,7 +499,7 @@
   </joint>
   <!-- Joint from shaftcouplerright to 225mmbottom -->
   <joint name="BR_leg2_1 (1) (1)" type="revolute">
-    <origin xyz="0.0292942 0.0403199 0.029" rpy="3.14159 1.46668e-15 -1.20023"/>
+    <origin xyz="0.0292942 0.0403199 0.029" rpy="-3.14159 1.34653e-15 -1.20023"/>
     <parent link="shaftcouplerright"/>
     <child link="225mmbottom"/>
     <axis xyz="0 0 1"/>
@@ -511,7 +511,7 @@
     <parent link="hip_link"/>
     <child link="shaftcouplerright"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-1.0472" upper="2.18166"/>
+    <limit effort="10" velocity="10" lower="-0.174533" upper="2.18166"/>
   </joint>
   <!-- Joint from part_1 to hip_link -->
   <joint name="pitch" type="revolute">
